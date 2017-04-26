@@ -1,0 +1,92 @@
+#content {
+	width: 100%;
+	min-height: 403px;
+	height: 100%;
+	text-align: center;
+
+	.validation {
+		color: $white;
+		height: auto;
+	}
+
+	.numberof {
+		@extend .validation;
+		min-height: 15px;
+	}
+
+	ul {
+		display: inline-block;
+		width:90%;
+
+		li:not(.nobox) {
+			@include createBox();
+		}
+	}
+
+	p {
+		@include createText($fontmain, 500, $title-size, $darkgray);
+		height: auto;
+		min-height: 65px;
+	    text-align: center;
+	    line-height: 21px;
+	    padding: 9px 20px;
+	}
+
+	#showmore {
+		@include createPinkButton();
+		margin: 30px 0;
+	}
+
+	#showmore:focus {
+	  outline: none;
+	}
+
+	#image-overlay {
+		display: none;
+	}
+
+	#album-item:hover #album-track {
+		-webkit-filter: blur(4px);
+		-moz-filter: blur(4px);
+		-o-filter: blur(4px);
+		-ms-filter: blur(4px);
+		filter: blur(4px);
+
+	}
+
+	#album-item:hover #image-overlay {
+		display: inline-block;
+		position: absolute;
+    	margin: auto;
+    	text-align: center;
+    	width: 263px;
+    	height: 263px;
+    	top: 75px;
+    	z-index: 60;
+	}
+
+	#image-overlay p {
+		@include createText($fontmain, 500, 1.1em, $white);
+	}
+}
+
+@media only screen and (min-width : 700px) and (max-width : 900px) {
+	#content {
+
+		ul {
+			display: inline-block;
+			width:77%;
+		}
+	}
+}
+
+@media only screen and (max-width : 420px) {
+	#content {
+		#grid {
+			display: inline-grid;
+		}
+		.validation, .numberof {
+			margin: auto;
+		}
+	}
+}

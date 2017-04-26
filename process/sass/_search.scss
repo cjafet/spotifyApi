@@ -1,0 +1,42 @@
+.query {
+    @include createText($fontmain, 700, 1rem, $searchinput);
+    width: 92%; // 640px
+    height: 30px;
+    margin-top: 14px;
+    padding: 10px 20px;
+    background: $whitebackground;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+    outline: 0;
+}
+
+.search {
+	@include createPinkButton();
+    position: absolute;
+    top: 19px;
+    right: 12px;
+    outline: 0;
+}
+
+@media only screen and (min-width : 701px) and (max-width : 900px) {
+
+    .search {
+        right: 9px;
+    }
+
+}
+
+@media only screen and (max-width : 700px) {
+    .query {
+        width: 65%;
+        font-size: 0.9rem;
+    }
+
+    .search {
+        position: relative;
+        margin-bottom: 33px;
+        margin-top: 0;
+        right: 0;
+        top: 12px;
+    }
+}

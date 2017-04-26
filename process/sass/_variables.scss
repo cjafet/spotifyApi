@@ -1,0 +1,30 @@
+// Load Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500,600');
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Open+Sans+Condensed:300,700|Open+Sans:400,600|Raleway:300,400,500,600,700,900');
+
+$pinkheader:      #CF4284;
+$graycontent:     #383A49;
+$grayfooter:      #323440;
+$graysearch:      #323440;
+$darkgray: 	      #292A33;
+$searchinput:     #475B62;
+$whitebackground: #ffffff;
+$searchbutton:	  #d05d84;
+$albumtitle:	  #292A33;
+$white:			  #ffffff;
+
+// $color-main: $darkblue;
+// $color-backgrounds: $offwhite;
+// $color-headlines: $red;
+
+
+$fontmain: 'Raleway', sans-serif;
+$font-highlight: 'Bree Serif', Helvetica, sans-serif;
+
+//measures
+
+$title-size: 0.9em;
+$small:		450px;
+$medium:	760px;
+$large:		1200px;

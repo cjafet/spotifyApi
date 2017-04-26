@@ -1,0 +1,13 @@
+<ul>
+<li ng-if="empty" style="display: flex;padding-top: 10px;" class="nobox"><p class="validation">No results found.</p></li>
+<li ng-if="albums" style="display: flex;padding-top: 10px;" class="nobox"><p class="numberof">Showing {{ result[0].albums.total }} results.</p></li>
+<li ng-hide="albums || empty" style="padding-top: 70px;text-align:center;" class="nobox"><img ng-src="images/magnify-2x.png" width="164" height="164" /><p style="color:#292f32">Your results will appear here</p></li>
+<div id="grid" ng-repeat="arr in result">
+	<li id="album-item" ng-repeat="item in arr.albums.items" style="position:relative;cursor:pointer;" data-fancybox data-src="#hidden-content" ng-click="showAlbum(item.id,item.images[0].url,item.name);">
+	<div id="image-overlay"><img ng-src="images/tracks.png" width="114" height="98" style="border:0" /><p>View Tracks</p></div>
+	<img id="album-track" ng-src="{{ item.images[1].url }}" width="263" height="263" style="border:0" class="round-image" />
+	<p data-fancybox data-src="#hidden-content" ng-click="showAlbum(item.id,item.images[0].url,item.name);">{{ subString(item.name) }}</p>
+</li>
+</div>
+</ul>
+<div ng-show="albums"><button id="showmore" ng-click="more()">SHOW ME MORE</button></div>

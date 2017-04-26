@@ -1,0 +1,10 @@
+<div id="cover">
+	<img ng-src="{{ image }}" width="100%" height="640" />
+</div>
+<p>{{ album }}</p>
+<ul>
+	<li ng-repeat="track in data">				
+	<video height="40px" controls name="media"><source ng-src="{{ track.url }}" type="audio/mpeg"></video>
+	<div id="tracks">{{ $index+1 }} - {{ track.name }}</div>
+	</li>
+</ul>

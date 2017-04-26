@@ -1,0 +1,34 @@
+<!doctype html>
+
+<html lang="en" ng-app="spotifyModule">
+<head>
+  <meta charset="utf-8">
+  <title>Compucorp :: Spotify API</title>
+  <meta name="description" content="Spotify API with AngularJS">
+  <meta name="author" content="angularjs, api, spotify">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="js/libs/fancybox/jquery.fancybox.min.css">
+  <script src="js/libs/angularjs/angular.min.js"></script>
+  <script src="js/HomeController.js"></script>
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body ng-cloak>
+
+	<header ng-include="'views/header.html'"></header>
+
+	<main ng-controller="HomeController">
+		<div id="search" ng-include="'views/search.html'"></div>
+		<div id="content" ng-include="'views/content.html'"></div>
+    <div id="hidden-content" style="display:none;width:auto;padding:0;" ng-include="'views/album.html'"></div>
+	</main>
+
+	<footer><p>Designed by Geek Label - Powered by Spotify</p></footer>
+
+<script src="js/libs/jquery/jquery-3.2.1.min.js"></script>
+<script src="js/libs/fancybox/jquery.fancybox.min.js"></script>
+</body>
+</html>

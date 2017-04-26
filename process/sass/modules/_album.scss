@@ -1,0 +1,62 @@
+#hidden-content {
+
+	#cover {
+		height:360px !important;
+		overflow:hidden;
+	}
+
+	ul {
+		padding: 0 10px;
+
+		li {
+			@include formatRow();
+		}
+	}
+
+	p {
+		@include createText($fontmain, 700, $title-size, $albumtitle);
+		height: auto;
+		min-height: 33px;
+		line-height: 33px; 
+		padding: 9px 70px;
+		text-align: left;
+	}
+
+	#tracks {
+		height: 40px;
+		line-height: 49px;
+		padding-left: 0;
+	}
+}
+
+@media only screen and (max-width : 700px) {
+	
+	#hidden-content {
+		#tracks {
+			height: 40px;
+			line-height: 18px;
+			padding-left: 0;
+			font-size: 0.7em;
+		}
+
+		img {
+			height: 100%;
+		}
+
+		ul {
+			padding: 0 10px;
+
+			li {
+				padding: 5px 17px;
+			}
+		}
+
+		p {
+			padding: 9px 25px;
+		}
+	}
+
+	video {
+		display: none;
+	}
+}
