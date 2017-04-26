@@ -1,6 +1,6 @@
 # Spotify API with AngularJS
 
-The application makes use of the endpoint bellow, to retrieve information about artists and albums name. 
+The application makes use of the endpoint bellow, to retrieve information about artists and albums. 
 https://api.spotify.com/v1/search?q=Hillsong&type=album,artist&limit=50&ffset=0
 
 The app make a combined use of the limit and offset params to navigate throught results.
