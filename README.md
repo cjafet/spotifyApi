@@ -7,7 +7,7 @@ The app make a combined use of the limit and offset params to navigate throught 
 The application also gets a sample of every single track of an album from SpotifyAPI.
 
 
-## Project Description
+# Project Description
 
 
 # Gulp
