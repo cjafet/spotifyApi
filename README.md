@@ -17,8 +17,8 @@ The project have the following dependencies for development:
 	gulp
 	jshint
 	sass 
-    sourcemaps 
-    webserver 
+        sourcemaps 
+    	webserver 
 	concat 
 
 The project also makes use of AngularJS, Jquery and FancyBox.
@@ -62,12 +62,12 @@ The service.js returns a promise object to the service caller which can make use
 ## Search method from spotifyApi service
 	
 	search: function(query) {
-          var deferred = $q.defer();
-          var path = 'https://api.spotify.com/v1/search?q=' + query + '&type=album,artist&limit=10&offset=0';
-          $http.get(path).success(function(data) {
+        var deferred = $q.defer();
+        var path = 'https://api.spotify.com/v1/search?q=' + query + '&type=album,artist&limit=10&offset=0';
+        $http.get(path).success(function(data) {
             deferred.resolve(data);
-          });
-            return deferred.promise;
+        });
+        return deferred.promise;
       	}
 	
 ## Calling the search method from spotifyApi service
