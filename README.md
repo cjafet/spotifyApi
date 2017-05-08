@@ -17,8 +17,8 @@ The project have the following dependencies for development:
 	gulp
 	jshint
 	sass 
-        sourcemaps 
-    	webserver 
+	sourcemaps 
+	webserver 
 	concat 
 
 The project also makes use of AngularJS, Jquery and FancyBox.
@@ -54,7 +54,7 @@ For Unit Testing we are making use of the ngMock and Jasmine framework.
 
 The test can be executed directly in the browser by going to the jasmine-standalone-2.3.4/SpecRunner.html file which tests the http call. The service.spec.js use the ngMock $httpBackend service to fake a call to a http service in the service.js source file. 
 
-	```
+	```javascript
 	$httpBackend.when('GET', 'https://api.spotify.com/v1/search?q=hillsong&type=album,artist&limit=10&offset=0')
     	.respond(200, jsonData);
 	```
@@ -63,7 +63,7 @@ The service.js returns a promise object to the service caller which can make use
 
 ## Search method from spotifyApi service
 
-	```
+	```javascript
 	search: function(query) {
           var deferred = $q.defer();
           var path = 'https://api.spotify.com/v1/search?q=' + query + '&type=album,artist&limit=10&offset=0';
@@ -76,7 +76,7 @@ The service.js returns a promise object to the service caller which can make use
 	
 ## Calling the search method from spotifyApi service
 
-	```
+	```javascript
 	spotifyApi.search("hillsong").then(function(data) {
       	 response = data;
     	});
