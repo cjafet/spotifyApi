@@ -57,8 +57,6 @@ The test can be executed directly in the browser by going to the jasmine-standal
 	$httpBackend.when('GET', 'https://api.spotify.com/v1/search?q=hillsong&type=album,artist&limit=10&offset=0')
     	.respond(200, jsonData);
 	
-The service.js returns a promise object to the service caller which can make use of the "then" function of the promise object in the call chain.
-
 ## Search method from spotifyApi service
 
 	search: function(query) {
@@ -71,6 +69,8 @@ The service.js returns a promise object to the service caller which can make use
 	}
 	
 ## Calling the search method from spotifyApi service
+
+The service.js returns a promise object to the service caller which can make use of the "then" function of the promise object in the call chain.
 
 	spotifyApi.search("hillsong").then(function(data) {
 		response = data;
