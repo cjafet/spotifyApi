@@ -61,19 +61,19 @@ The service.js returns a promise object to the service caller which can make use
 
 ## Search method from spotifyApi service
 
-		search: function(query) {
-        var deferred = $q.defer();
-        var path = 'https://api.spotify.com/v1/search?q=' + query + '&type=album,artist&limit=10&offset=0';
-        $http.get(path).success(function(data) {
-        deferred.resolve(data);
-        });
-        return deferred.promise;
-      	}
+	search: function(query) {
+		var deferred = $q.defer();
+		var path = 'https://api.spotify.com/v1/search?q=' + query + '&type=album,artist&limit=10&offset=0';
+		$http.get(path).success(function(data) {
+		deferred.resolve(data);
+		});
+		return deferred.promise;
+	}
 	
 ## Calling the search method from spotifyApi service
 
-		spotifyApi.search("hillsong").then(function(data) {
-      	response = data;
-    	});
+	spotifyApi.search("hillsong").then(function(data) {
+		response = data;
+	});
 	
 
