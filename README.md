@@ -30,7 +30,7 @@ The AngularJS makes use of the $http cache for loading content faster and of the
 
 All results are pushed into an array so we can get access to all the result sets and loop through all results available. Each new call can be added to the previous results, making possible to loop through all calls.
 
-We make use of the sessionStorage.getItem("clicked") and sessionStorage.getItem("search") to keep track of the offset and the search query through the application.
+We make use of the **sessionStorage.getItem("clicked")** and **sessionStorage.getItem("search")** to keep track of the offset and the search query through the application.
 
 All http calls are handled by the get(query) function.
 
